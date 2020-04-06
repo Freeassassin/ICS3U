@@ -20,11 +20,14 @@ import javax.swing.JOptionPane;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextPane;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import java.awt.Canvas;
 import java.awt.Label;
+import java.awt.SystemColor;
 
 
 //declare the public class for this file 
@@ -67,6 +70,13 @@ public class MohammadzadehF_BirthdayGameAssignment {
 		birthdayGameFrame.setBounds(100, 100, 675, 450);
 		birthdayGameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		birthdayGameFrame.getContentPane().setLayout(null);
+		// declare the label that holds the image
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setLabelFor(birthdayGameFrame);
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setIcon(new ImageIcon(MohammadzadehF_BirthdayGameAssignment.class.getResource("/images/download.jpg")));
+		lblNewLabel.setBounds(497, 298, 164, 114);
+		birthdayGameFrame.getContentPane().add(lblNewLabel);
 		// declare the lable that dispalys the title
 		JLabel titleLbl = new JLabel("Welcome To The Birthday Game");
 		titleLbl.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 22));
@@ -136,82 +146,10 @@ public class MohammadzadehF_BirthdayGameAssignment {
 		});
 		bDayCalculateBtn.setBounds(359, 304, 132, 24);
 		birthdayGameFrame.getContentPane().add(bDayCalculateBtn);
-		// declare the  that 
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(MohammadzadehF_BirthdayGameAssignment.class.getResource("/images/download.jpg")));
-		lblNewLabel.setBounds(20, 330, 104, 82);
-		birthdayGameFrame.getContentPane().add(lblNewLabel);
+
 		
-/*
- * Write a program that creates an integer variable: length and asks the user for the length of a movie in minutes then outputs the price of the movie as a double. The movie costs 25 cents for every minute.
-
-Indicate the output of the following piece of code:
-class Main {
-public static void main(String[] args) {
-String name = "Bob";
-int trees = 3;
-int flowers = 10;
-int plants = trees + flowers;
-String quote = "Hello";
-System.out.print(name + " has " + trees + " trees"); System.out.println(" and " + flowers + " flowers,\n" + plants + " plants in total.");
-System.out.println(name + " says \"" + quote + ".\""); }
-}
-
-Write a program with an integer variable: apples and another integer variable: applesPerBasket. The program should ask the user for a number of apples and tell them how many baskets they can fill. Every basket can fit 5 apples. The program should also tell the user how many more apples are needed to fill another basket if there are still apples left over. If there are no apples left over, the program should say that the user needs 5 more apples to fill another basket.
-
-Write a program that will ask the user for the length width and height of a rectangular prism and outputs the surface area and the volume of the prism.
-
-Write a program to reverse any 3-digit number. For example an input of “321” results in an output of “123”.
-
-
-Write a program that prompts the user for two numbers, being the numerator and denominator of the fraction. It should output the fraction, then if it is an improper fraction it should output the result, then the result as a mixed fraction. For example, if the input is 7 and 4, the output should be 7/4 is equal to 1 ¾
-
-Here is a code fragment asking the user for some information about their debit card to order online groceries. Indicate what needs to be written in the three missing spaces.
-import java.util.*;
-class Main {
-public static void main(String[] args) {
-Scanner puppies = new Scanner(System.in);
-long creditCardNumber;
-String firstName;
-char lastName;
-System.out.println("Please enter your first name");
-firstName = 1)______________________________
-System.out.println("Next entre the first letter of your last name");
-lastName = 2)_______________________________
-System.out.println("Finally entre the frist 4 digits of your credit card number");
-creditCardNumber = 3)________________________ } }
-
-What will this code printout? Also, what is the word final used for?
-import java.util.*;
-class Main {
-public static void main(String[] args) {
-Scanner piglettes = new Scanner(System.in);
-final int a = 4;
-final int b = 3;
-double hypotenuse;
-hypotenuse = Math.sqrt(Math.pow(a,2) + Math.pow(b,2)); System.out.println(hypotenuse);
-} }
-
-*
-*Scanner type:
-
-import java.util.Scanner;
-public class print {
-
-public static void main(String[] args) {
-
-Scanner input = new Scanner(System.in);
-
-System.out.println("Please enter your name");
-String name=input.next();
-System.out.println("PLease enter a number");
-Float money=input.nextFloat();
-money*=2;
-System.err.println("Hello "+name+" You owe me " +money+ " Dollars!!!");
-}
-
-}
-*
-*/
+		
+		
+		
 		}
 }
